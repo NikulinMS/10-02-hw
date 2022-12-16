@@ -103,14 +103,35 @@ clusters, HPC)`
 
 ### Задание 6*
 
-`Приведите ответ в свободной форме........`
+| Tool        | Version |
+| -------------: |:-----|
+| RabbitMQ      | v3.6.5 |
+| HAProxy      | v1.6.3 |
+| PHP | v7.1 |
+| Docker | v1.12+ |
+| Docker-compose | v1.8+ |
 
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
 
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота](ссылка на скриншот)`
+ * **3 RabbitMQ nodes** but we can add a lot more.
+ * **3 docker networks** to be able to simulate network partition.
+ * **1 HAProxy node** to load balance request and to be "failure proof".
+ * **1 default network** for the consumers and producers to connect with nodes through HAProxy.
+
+## Tests / Benchmark
+
+With this stack you will be able to experiment:
+
+* Load Balancing
+* Node failure
+* Network partition
+* Messages persistency
+* Message NO ACK and retries
+
+![main_page.png](img%2Fmain_page.png)
+![main_page_2.png](img%2Fmain_page_2.png)
+![docker_stats.png](img%2Fdocker_stats.png)
+![network_partition.png](img%2Fnetwork_partition.png)
+![node_not_running_2.png](img%2Fnode_not_running_2.png)
+![node_not_running_2_1.png](img%2Fnode_not_running_2_1.png)
+![node_not_running_3.png](img%2Fnode_not_running_3.png)
+![node_not_running_3_1.png](img%2Fnode_not_running_3_1.png)
